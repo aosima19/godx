@@ -1,0 +1,96 @@
+getgenv().AccountFilter = {
+    ["Enabled"] = false,
+    ["Accounts"] = {"Dangngu_1230"}
+}
+getgenv().config = {
+    --[[
+        true: enable / false: disable
+    ]]
+    ["Team"] = "Pirates", -- Pirates,Marines
+    ["FPS Boost"] = true,
+    ["LocalPlayer"] = {
+        ["Ken Haki"] = true,
+        ["Invisible"] = true,
+        ["Click Delay"] = 0.2,
+        ["Panic Mode"] = { -- automatically runs when health below "Run" and returns to kill player when above "Max"
+            ["Skip Player"] = true, -- skip to the next player then 
+            ["Run"] = 2500,
+            ["Max"] = 3000,
+        }
+    },
+    ["settings"] = {
+        ["Cam Farm"] = false, -- non-Windows user should enable this
+        ["White Screen"] = false,
+        ["Region_Hop"] = {
+            ["Enabled"] = true, -- true/false
+            ["Value"] = "Singapore"
+            --[[Singapore, United States, Germany, Japan, France, Australia, etc
+                - Singapore is the best choice for Asia
+            ]]
+        },
+        ["Webhook"] = {
+            ["Enabled"] = false, -- true/false
+            ["URL"] = {
+                ["Discord"] = "", -- Your webhook url
+                ["Thumbnail"] = "helo ae" -- you can replace "default" by your own gif url
+                -- https://media3.giphy.com/media/koTcC0UFlN4WY/giphy.gif?cid=ecf05e479x5d7wlvndaefjdrktdlchzthfrsqc1s3m5qzhm3&ep=v1_gifs_search&rid=giphy.gif&ct=g
+            }
+        },
+        ["Chatkill"] = {
+            ["Enabled"] = true, -- true/false
+            ["Text"] = {
+                "haha kid","ez game haha"
+            }
+        },
+        ["FPS Locker"] = {
+            ["Enabled"] = true, -- true/false
+            ["Value"] = 9999
+        },
+    ["Bounty Lock"] = {
+            ["Enabled"] = true, -- Auto kick if 30m
+            ["Value"] = 30000000
+        },
+        ["Ignore"] = { -- will ignore hunting fruit users below
+            ["Buddha Users"] = false,
+            ["Portal Users"] = true,
+            ['Some Annoying V4'] = true,
+        },
+        ["Stats"] = {
+            ["Auto Reset Stat If Doesnt Match"] = false,
+            ["Points"] = "Demon Fruit" --[[ Demon Fruit, Sword, Gun ]]
+    },
+    },
+    ["Skills"] = {
+        ["Melee"] = {
+            ["Time"] = 1,
+        ["SwitchNextWeaponIfCooldown"] = true,
+            ["Enabled"] = true,
+            ["Z"] = {["Enabled"] = true, ["HoldTime"] = 0.1},
+            ["X"] = {["Enabled"] = true, ["HoldTime"] = 0.1},
+            ["C"] = {["Enabled"] = true, ["HoldTime"] = 0.1}
+        },
+        ["Fruit"] = {
+            ["Time"] = 0,
+            ["Enabled"] = true,
+            ["Z"] = {["Enabled"] = true, ["HoldTime"] = 0.1},
+            ["X"] = {["Enabled"] = true, ["HoldTime"] = 0.1},
+            ["C"] = {["Enabled"] = true, ["HoldTime"] = 0.1},
+            ["V"] = {["Enabled"] = true, ["HoldTime"] = 0.1},
+            ["F"] = {["Enabled"] = false, ["HoldTime"] = 0.1}
+        },
+        ["Sword"] = {
+            ["Time"] = 1,
+            ["Enabled"] = true,
+            ["Z"] = {["Enabled"] = true, ["HoldTime"] = 0.4},
+            ["X"] = {["Enabled"] = true, ["HoldTime"] = 0.2},
+        },
+        ["Gun"] = {
+            ["Time"] = 0,
+            ["Enabled"] = true,
+            ["GunMode"] = false,
+            ["Z"] = {["Enabled"] = false, ["HoldTime"] = 0.3},
+            ["X"] = {["Enabled"] = false, ["HoldTime"] = 0.3},
+        }
+    }
+}
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/LeNguyenBaoPhuc/BloxFruits/main/Bounty.lua")))()
